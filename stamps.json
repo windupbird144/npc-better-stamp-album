@@ -680,14 +680,24 @@
       "You worked out the lenny conundrum so you deserve this rare stamp!",
       "/images/items/stamp_neo_petpets.gif"
     ],
-    null,
+    [
+      "Seasonal Stamp",
+      180,
+      "This special commemorative stamp was only available from the Advent Calendar in year 5.",
+      "https://items.jellyneo.net/assets/imgs/items/286.gif"
+    ],
     [
       "Neolodge Stamp",
       73,
       "Mmmm... doesn't this stamp make you want to book a deluxe room now?",
       "/images/items/stamp_nc_lodge.gif"
     ],
-    null,
+    [
+      "Year 5 Stamp",
+      180,
+      "This special commemorative stamp was only available from the Advent Calendar in year 4.",
+      "https://items.jellyneo.net/assets/imgs/items/287.gif"
+    ],
     [
       "Deluxe Money Tree Stamp",
       85,

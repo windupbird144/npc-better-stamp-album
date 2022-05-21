@@ -10,18 +10,23 @@
 // @license      MIT
 // ==/UserScript==
 /*
+
+// Script to scrape an album page to an array of stamps
+// You should run this in the browser console e.g. on this page
+// https://neopetsclassic.com/stamps/album/?page_id=5&owner=
+
 (function() {
-function stampFromImage(img) {
-    if (img.src.endsWith("no_stamp.gif")) return
-    const url = img.src.replace("https://neopetsclassic.com","")
-    const [name, rest] = img.title.split(" - r")
-    const [stringRarity, description] = rest.split(" : ")
-    const rarity = parseInt(stringRarity)
-    return [name, rarity, description, url]
-}
-const pageId = +new URLSearchParams(window.location.search).get("page_id")
-const stamps = Array.from(document.querySelectorAll(`table[width="450"] img`))
-    .map(stampFromImage)
+    function stampFromImage(img) {
+        if (img.src.endsWith("no_stamp.gif")) return
+        const url = img.src.replace("https://neopetsclassic.com","")
+        const [name, rest] = img.title.split(" - r")
+        const [stringRarity, description] = rest.split(" : ")
+        const rarity = parseInt(stringRarity)
+        return [name, rarity, description, url]
+    }
+    const pageId = +new URLSearchParams(window.location.search).get("page_id")
+    const stamps = Array.from(document.querySelectorAll(`table[width="450"] img`))
+        .map(stampFromImage)
 
     const ser = JSON.stringify(stamps)
     return ser
