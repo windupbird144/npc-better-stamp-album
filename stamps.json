@@ -54,7 +54,12 @@
       "The stamp actually tastes of Zeenana when you lick it. Clever, eh?",
       "/images/items/stamp_island_fruit.gif"
     ],
-    null,
+    [
+      "Mystery Island Grarrl Stamp",
+      101,
+      "Arrin the Grarrl was always mocked at school for his tastes in clothing.",
+      "/images/items/stamp_island_grarrl.gif"
+    ],
     [
       "Island Acara Stamp",
       80,
@@ -73,11 +78,36 @@
       "Apparently they all do something weird if you press a concealed button up their left nostril.",
       "/images/items/stamp_island_heads.gif"
     ],
-    null,
-    null,
-    null,
-    null,
-    null,
+    [
+      "Bottle of Sand Stamp",
+      101,
+      "Yes, its no wonder this sand stamp only costs one Neopoint!",
+      "/images/items/stamp_island_sand.gif"
+    ],
+    [
+      "Island Uni Stamp",
+      101,
+      "The pretty Mystery Island Uni.",
+      "/images/items/stamp_island_uni.gif"
+    ],
+    [
+      "Mystery Island Chef Stamp",
+      101,
+      "You couldnt go and fetch me a bagguss and some asparagus could you?",
+      "/images/items/stamp_island_chef.gif"
+    ],
+    [
+      "Tombola Stamp",
+      101,
+      "And you have won.... a can of beans :(",
+      "/images/items/stamp_island_tombola.gif"
+    ],
+    [
+      "Mystery Island Kiko Stamp",
+      101,
+      "Kiko, kiko!",
+      "/images/items/stamp_island_kiko.gif"
+    ],
     [
       "Island Mystic Stamp",
       70,
@@ -96,7 +126,12 @@
       "You won't find many of these at the collector fair!",
       "/images/items/stamp_misprint1.gif"
     ],
-    null,
+    [
+      "Upside Down Island Acara Stamp",
+      99,
+      "Doh!",
+      "/images/items/stamp_misprint2.gif"
+    ],
     [
       "One Hundred Million Neopoint Stamp",
       99,
@@ -171,7 +206,12 @@
       "Grundos arrived in Neopia by working for Sloth on the Virtupets Space Station.",
       "/images/items/stamp_space_grundo.gif"
     ],
-    null,
+    [
+      "Commander Garoo Stamp",
+      101,
+      "Didnt his eyes just move?",
+      "/images/items/stamp_space_garoo.gif"
+    ],
     [
       "Roast Gargapple Stamp",
       85,
@@ -244,7 +284,12 @@
       "Wow, the space faerie is inverted on this card, must be rare or something.",
       "/images/items/stamp_spa_faerie.gif"
     ],
-    null,
+    [
+      "Grundo Warehouse Stamp",
+      97,
+      "The warehouse keeps track of everything that comes in and out of the space station.",
+      "/images/items/sta_grundo.gif"
+    ],
     [
       "Virtupets Space Station Stamp",
       98,
@@ -259,14 +304,54 @@
     ]
   ],
   "3": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    [
+      "Chomby Stamp",
+      101,
+      "A yellow Chomby against a rather pretty pastel background.",
+      "/images/items/stamp_tyrannia_chomby.gif"
+    ],
+    [
+      "Tyrannian Elephante Stamp",
+      101,
+      "Triangular stamps were banned in the years 2 and 3 due to a variety of reasons.",
+      "/images/items/stamp_tyrannia_elephante.gif"
+    ],
+    [
+      "Grarrg Stamp",
+      101,
+      "Grarrg the Grarrl helped out in the first Tyrannian War.",
+      "/images/items/stamp_tyrannia_grarrl.gif"
+    ],
+    [
+      "Tyrannian Kougra Stamp",
+      101,
+      "A Tyrannian Kougra in a battle pose - you better run if you dont want to be cut to shreds!",
+      "/images/items/stamp_tyrannia_kougra.gif"
+    ],
+    [
+      "Tyrannia Stamp",
+      101,
+      "Ahhh, the lovely land of Tyrannia!",
+      "/images/items/stamp_tyrannia_landscape.gif"
+    ],
+    [
+      "Omelette Stamp",
+      101,
+      "The source of food for the whole of Tyrannia - the giant omelette!",
+      "/images/items/stamp_tyrannia_omelette.gif"
+    ],
+    [
+      "Tar Pit Stamp",
+      101,
+      "Maybe this Grarrl should have looked where he was going.",
+      "/images/items/stamp_tyrannia_tarpit.gif"
+    ],
+    [
+      "Wock Til You Drop Stamp",
+      101,
+      "Are you ready to rock?",
+      "/images/items/stamp_tyrannia_wock.gif"
+    ],
     [
       "Tyrannian Grarrl Stamp",
       80,
@@ -339,9 +424,24 @@
       "This stamp depicts a beautiful Tyrannian Usul in her natural habitat.",
       "/images/items/stamp_tyrannia_usul.gif"
     ],
-    null,
-    null,
-    null,
+    [
+      "Monocerous Stamp",
+      110,
+      "Fear the Monocerous!!!",
+      "/images/items/stamp_tyrannia_monocerous.gif"
+    ],
+    [
+      "Kyruggi Stamp",
+      101,
+      "Kyruggi was very good at binary / ascii manipulation!",
+      "/images/items/stamp_tyrannia_kyruggi.gif"
+    ],
+    [
+      "Discovery of Fire Stamp",
+      110,
+      "Fire was such an important discovery!",
+      "/images/items/stamp_tyrannia_fire.gif"
+    ],
     [
       "Shiny Monoceraptor Stamp",
       97,
@@ -386,7 +486,12 @@
       "What was that noise under your bed? It must have been the wind... right?",
       "/images/items/stamp_hal_spyder.gif"
     ],
-    null,
+    [
+      "Scary Tree Stamp",
+      101,
+      "Uh oh, I wouldnt like to climb THAT tree!",
+      "/images/items/stamp_hal_trees.gif"
+    ],
     [
       "Hubrid Nox Stamp",
       85,
@@ -569,7 +674,12 @@
       "The blu.. blue... chia pla.. plays with the b.. a... ll",
       "/images/items/stamp_neo_book.gif"
     ],
-    null,
+    [
+      "Petpets Stamp",
+      101,
+      "You worked out the lenny conundrum so you deserve this rare stamp!",
+      "/images/items/stamp_neo_petpets.gif"
+    ],
     null,
     [
       "Neolodge Stamp",
@@ -626,7 +736,12 @@
       "Mmm... this stamp makes it look as if the chocolate factory is really made of chocolate...",
       "/images/items/sta_chocfactory.gif"
     ],
-    null,
+    [
+      "Midnight Jelly World Stamp",
+      101,
+      "Its midnight in Jelly World, and there is not a soul around!",
+      "/images/items/stamp_jelly_night.gif"
+    ],
     [
       "Neopia Central Scene Stamp",
       89,
@@ -731,7 +846,12 @@
       "An ancient wizard, trapped within the desert-entombed Temple of Roo is now trapped in a stamp!",
       "/images/items/stamp_neoquest_archmagusroo.gif"
     ],
-    null,
+    [
+      "Golden Mr Irgo Stamp",
+      180,
+      "This stamp is all shiny and golden!",
+      "/images/items/stamp_mr_irgo.gif"
+    ],
     [
       "Zombie Faleinn Stamp",
       87,
@@ -1352,7 +1472,12 @@
       "The legendary Kings Lens, so named after King Coltzan himself.",
       "/images/items/sta_bd_kings_lens.gif"
     ],
-    null,
+    [
+      "Ring of Sloth Stamp",
+      180,
+      "A dastardly weapon if ever there was one. This was given out by the advent calendar in year 5.",
+      "/images/items/sta_bd_sloth_ring.gif"
+    ],
     [
       "Illusens Staff Stamp",
       85,
@@ -1481,8 +1606,18 @@
       "A handful of these will have your opponents running for cover.",
       "/images/items/sta_bfm_acorns.gif"
     ],
-    null,
-    null,
+    [
+      "Zafara Double Agent Stamp",
+      96,
+      "The question is not whose side is she on, but rather whose side is she on today?",
+      "/images/items/sta_bfm_zafara_agent.gif"
+    ],
+    [
+      "Battle Uni Stamp",
+      97,
+      "The trusty Battle Unis are always ready to defend Meridell, no matter what the cost.",
+      "/images/items/sta_bfm_battle_uni.gif"
+    ],
     [
       "Court Dancer Stamp",
       98,
@@ -1501,9 +1636,24 @@
       "This withered old Moehog has many tricks up her sleeves.",
       "/images/items/sta_morguss.gif"
     ],
-    null,
-    null,
-    null,
+    [
+      "Meerca Spy Stamp",
+      98,
+      "Sneaky, silent and most untrustworthy...",
+      "/images/items/sta_meerca_spy.gif"
+    ],
+    [
+      "The Great Battle Stamp",
+      99,
+      "It looks as if a heroic conflict has taken place on this once grassy meadow...",
+      "/images/items/sta_great_battle.gif"
+    ],
+    [
+      "Lord Kass Stamp",
+      99,
+      "Saviour of the Darigan Citadel or savage war lord... you decide!",
+      "/images/items/sta_kass.gif"
+    ],
     [
       "The Three Stamp",
       99,

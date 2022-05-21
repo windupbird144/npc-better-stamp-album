@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stamp checklist
 // @namespace    github.com/windupbird144
-// @version      0.3
+// @version      0.4
 // @description  neopetsclassic.com fill empty
 // @author       github.com/windupbird144
 // @match        https://neopetsclassic.com/stamps/album/?page_id=*&owner=*
@@ -31,10 +31,13 @@ const stamps = Array.from(document.querySelectorAll(`table[width="450"] img`))
 (function () {
     'use strict';
 
-    // Your code here...
     // Fetch the database of stamps remotely. We expect the host of the external resource to manage
     // the E-Tag header, use no-cache to only reload the resource if it has been update.
-    fetch("https://raw.githubusercontent.com/windupbird144/npc-stamp-album-helper/main/stamps.json", { cache: "no-cache" })
+    //
+    // The entry stamp_database in localStorage overwrites the default resource.
+    // This is useful for testing. You can upload an experimental database to e.g. Github Gists,
+    // write the link into localStorage and work with your development version
+    fetch(localStorage.getItem("stamp_database") ?? "https://raw.githubusercontent.com/windupbird144/npc-stamp-album-helper/main/stamps.json", { cache: "no-cache" })
         .then(res => res.json())
         .then(main)
 
@@ -90,23 +93,18 @@ const stamps = Array.from(document.querySelectorAll(`table[width="450"] img`))
         }
 
 
-
-
-        function searcher(url, value, select) {
-            return function (query) {
-                const w = window.open(url)
-                w.addEventListener("DOMContentLoaded", (e) => {
-                    // Fill the shop wizard form with the name of the stamp and set it to
-                    // identical search
-                    const IDENTICAL_TO_MY_PHRASE = value
-                    const searchMethod = w.document.querySelector(`select[name='${select}']`)
-                    const queryInput = w.document.querySelector("input[name='query']")
-                    if (searchMethod && queryInput) {
-                        searchMethod.value = IDENTICAL_TO_MY_PHRASE
-                        queryInput.value = query
+        // Open the url in a new tab and fill the form fields
+        function openAndFill(url, formFields) {
+            const w = window.open(url)
+            w.addEventListener("DOMContentLoaded", (e) => {
+                const document = w.document
+                for (let [name, value] of Object.entries(formFields)) {
+                    const formField = document.querySelector(`[name='${name}']`)
+                    if (formField) {
+                        formField.value = value
                     }
-                })
-            }
+                }
+            })
         }
 
         function encodeQuery(key, value) {
@@ -115,8 +113,9 @@ const stamps = Array.from(document.querySelectorAll(`table[width="450"] img`))
             return tmp.toString()
         }
 
-        const searchWizard = searcher('/market/wizard', 1, 'search_method')
-        const searchTradingPost = searcher('/island/tradingpost/browse/', 2, 'category')
+        const searchWizard = (query) => openAndFill('/market/wizard', { 'search_method' : 1, query })
+        const searchTradingPost = (query) => openAndFill('/island/tradingpost/browse/', { category : 2, query })
+        const searchWishingWell = (query) => openAndFill('/wishing', { wish: query, amount: 69 })
         const searchAuctionHouse = () => window.open("/auctions")
         const searchSDB = (query) => window.open(`/safetydeposit/?page=1&${encodeQuery("query", query)}&category=0`)
         const searchJellyneo = (query) => window.open(`https://items.jellyneo.net/search/?${encodeQuery("name", query)}`)
@@ -140,6 +139,7 @@ const stamps = Array.from(document.querySelectorAll(`table[width="450"] img`))
              <img data-search="auction-house" src="https://i.ibb.co/vYzmPxV/auction25.gif" />
              <img data-search="sdb" src="https://i.ibb.co/gRQ24Jx/sdb25.gif" />
              <img data-search="jn" src="https://i.ibb.co/cvGsCw4/fishnegg25.gif" />
+             <img data-search="wishing-well" src="https://i.ibb.co/b6wH3Ps/well25.gif" />
            </div>
         </div>
         <div class="arrow" data-delta="1">></div>
@@ -237,7 +237,8 @@ const stamps = Array.from(document.querySelectorAll(`table[width="450"] img`))
                 "trading": searchTradingPost,
                 "auction-house": searchAuctionHouse,
                 "sdb": searchSDB,
-                "jn": searchJellyneo
+                "jn": searchJellyneo,
+                "wishing-well": searchWishingWell
             }[search]
             if (searchFunction) {
                 return searchFunction(query)
