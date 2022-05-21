@@ -926,7 +926,12 @@
       "A cute little Snowbunny has hopped right into this stamp!",
       "/images/items/sta_winter_snowbunny.gif"
     ],
-    null
+    [
+      "Sticky Snowflake Stamp",
+      99,
+      "The rarest stamp in the Snowy Valley collection!",
+      "/images/items/sta_winter_sticky_snowflake.gif"
+    ]
   ],
   "8": [
     [
