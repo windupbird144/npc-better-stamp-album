@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stamp checklist
 // @namespace    github.com/windupbird144
-// @version      0.4
+// @version      0.5-PREVIEW
 // @description  neopetsclassic.com fill empty
 // @author       github.com/windupbird144
 // @match        https://neopetsclassic.com/stamps/album/?page_id=*&owner=*
@@ -33,6 +33,11 @@
 })()
 
 */
+
+function toRelativeUrl(url) {
+    return url.replace("https://neopetsclassic.com", "")
+}
+
 (function () {
     'use strict';
 
@@ -185,8 +190,14 @@
        display: grid;
        grid-template-columns: min-content auto 1fr min-content;
     }
+    #compare-user {
+        margin-top: 1em;
+    }
     [data-collected="true"] { color: darkgreen }
     [data-collected="false"] { color: darkred }
+    [data-diff] { border: 3px solid transparent; }
+    [data-diff="plus"] { border-color: lime; }
+    [data-diff="minus"] { border-color: red; }
 
     </style>`)
 
@@ -267,6 +278,88 @@
         const jellyneoLink = jellyneoLinks[page]
         if (jellyneoLink) {
             table.nextElementSibling?.insertAdjacentHTML("afterend", `<a href="https://items.jellyneo.net/search${jellyneoLink}" target="_blank"/><center><img src="https://i.ibb.co/cvGsCw4/fishnegg25.gif" /> Album info <img src="https://i.ibb.co/cvGsCw4/fishnegg25.gif" /></center></a>`)
+        }
+
+        // Show diff form
+        const compareUser = localStorage.getItem("compare-user") ?? ""
+        
+        table.nextElementSibling.insertAdjacentHTML("beforeend", `<form action="#" id="compare-user">
+           <label for="compare-user">Compare against another user</label><br>
+           <input type="text" name="compare-user" value="${compareUser}" />
+           <input type="submit" value="Compare" />
+           <button name="clear">Clear</button>
+           <div class="error"></div>
+        </form>`)
+
+        const diff = table.parentElement.querySelector("#compare-user")
+        const error = diff.querySelector(".error")
+        const setError = (msg) => error.textContent = msg
+        const clearError = () => error.textContent = ""
+
+        // Read the key compare-user from localstorage, make a fetch request to their stamp album and run the diff function
+        function applyDiffHTTP(username) {
+            return fetch(`/stamps/album/?page_id=${page}&owner=${username}`)
+                .then(res => res.text())
+                .then((html) => {
+                    if (html.includes("That user does not exist!")) {
+                        throw new Error("That user user does not exist! Usernames are cAsE-sEnSiTiVe.")
+                    } else {
+                        applyDiff(html)
+                    }
+                })
+        }
+
+        // Change the name in the compare-user form field, save it to local storage and run applyDiffFromLocalStorage immediately
+        table.parentElement.addEventListener("submit", async (e) => {
+            e.preventDefault()
+            let username = diff.querySelector(`[name="compare-user"]`).value.trim()
+            if (!username?.length) {
+                setError("Please enter a valid username")
+                return
+            }
+            setError("Loading...")
+            applyDiffHTTP(username)
+                .then(() => {
+                    clearError()
+                    localStorage.setItem("compare-user", username)
+                })
+                .catch((err) => {
+                    setError(err.message)
+                })
+        })
+
+        // Stop comparing against another user
+        table.parentElement.addEventListener("click", (e) => {
+            if (e.target.name !== "clear") return
+            e.stopPropagation()
+            e.preventDefault()
+            localStorage.removeItem("compare-user");
+            const username = diff.querySelector(`[name="compare-user"]`)
+            if (username) {
+                username.value = ""
+            }
+            cells.forEach((cell) => {
+                cell.parentElement.dataset.diff = ""
+            })
+        })
+
+        function applyDiff(html) {
+            // regex to get all stamp images on this html page
+            // match(/src="\/images.+?"/g).map(e => e.match(/\/images.+\.\w+/)[0])
+            for (let cell of cells) {
+                cell.parentElement.dataset.diff = ""
+                const have = cell.dataset.collected === "true"
+                const otherHas = html.includes(toRelativeUrl(cell.src))
+                if (have && !otherHas) {
+                    cell.parentElement.dataset.diff = "plus"
+                } else if (!have && otherHas) {
+                    cell.parentElement.dataset.diff = "minus"
+                }
+            }
+        }
+
+        if (compareUser) {
+            applyDiffHTTP(compareUser)
         }
     }
 })();
