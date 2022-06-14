@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stamp checklist
 // @namespace    github.com/windupbird144
-// @version      0.5-PREVIEW
+// @version      0.5
 // @description  neopetsclassic.com fill empty
 // @author       github.com/windupbird144
 // @match        https://neopetsclassic.com/stamps/album/?page_id=*&owner=*
