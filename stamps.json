@@ -1671,12 +1671,170 @@
       "/images/items/sta_three.gif"
     ]
   ],
+  "13": [
+    [
+      "Trestin Stamp",
+      87,
+      "Ahh the peaceful town of Trestin, doesnt it look pretty.",
+      "/images/items/sta_nq2_trestin.gif"
+    ],
+	[
+      "Librarian Stamp",
+      86,
+      "If you are looking for answers who better to ask than a librarian?",
+      "/images/items/sta_nq2_librarian.gif"
+    ],
+	[
+      "Rohanes Mother Stamp",
+      87,
+      "This kindly old Blumaroo is the third stamp in the NeoQuest II set.",
+      "/images/items/sta_nq2_rohanes_mother.gif"
+    ],
+	[
+      "Temple Of The Sky Stamp",
+      89,
+      "Eep it looks a little deserted, maybe you shouldnt go there.",
+      "/images/items/sta_nq2_temple.gif"
+    ],
+	[
+      "Hubrid Noxs Mountain Fortress Stamp",
+      88,
+      "Well you didnt think Hubrid would live in a pretty pink castle did you?!",
+      "/images/items/sta_nq2_hubrid_fortress.gif"
+    ],
+	[
+      "NeoQuest II Logo Stamp",
+      87,
+      "A shining stamp that will look great in your NeoQuest II album!",
+      "/images/items/sta_nq2_logo.gif"
+    ],
+	[
+      "Devilpuss Stamp",
+      89,
+      "Grrr its a scary Devilpuss that you would have fought many times in NeoQuest II.",
+      "/images/items/sta_nq2_devilpuss.gif"
+    ],
+	[
+      "Celestial Talisman Stamp",
+      88,
+      "Oooh this is a very cool item in NeoQuest II you know!",
+      "/images/items/sta_nq2_talisman.gif"
+    ],
+	[
+      "Slime Titan Stamp",
+      89,
+      "How cool the edge of the stamp is all shiny so it looks like slime!",
+      "/images/items/sta_nq2slimemonster.gif"
+    ],
+	[
+      "Kolvars Stamp",
+      89,
+      "Eep, this is one Spyder you dont want to meet on a dark night!",
+      "/images/items/sta_nq2spyder.gif"
+    ],
+	[
+      "Rampaging Grundonoil Stamp",
+      89,
+      "Its so cute yet scary at the same time!",
+      "/images/items/sta_nq2grundonoil.gif"
+    ],
+	[
+      "Northern Watch Tower Stamp",
+      96,
+      "From this mighty tower you can see for miles around.",
+      "/images/items/sta_neoquest2_ntower.gif"
+    ],
+	[
+      "Lost City of Phorofor Stamp",
+      95,
+      "Congratulations, you seem to have found the lost city!",
+      "/images/items/sta_neoquest2_phorofor.gif"
+    ],
+	[
+      "Shadow Gulch Stamp",
+      95,
+      "What an awfully spooky place, I wouldnt want to live there...",
+      "/images/items/sta_neoquest2_gultch.gif"
+    ],
+	[
+      "Von Roos Castle Stamp",
+      97,
+      "Well you didnt really think he lived in a cave did you?",
+      "/images/items/sta_neoquest2_vonroo.gif"
+    ],
+	[
+      "Velm Stamp",
+      93,
+      "Possibly the most famous Techo to date!",
+      "/images/items/sta_nq_velm.gif"
+    ],
+	[
+      "Talinia Stamp",
+      94,
+      "Swift of foot and deadly with a bow, Talinia makes a great ally.",
+      "/images/items/sta_nq_talinia.gif"
+    ],
+	[
+      "Rohane Stamp",
+      80,
+      "Here Rohane is showing off his extra special armour, you did unlock that right?",
+      "/images/items/sta_nq_rohane.gif"
+    ],
+	[
+      "Mipsy Stamp",
+      92,
+      "Possibly the most fashionably dressed heroine NeoQuest II has ever seen!",
+      "/images/items/sta_nq_mipsy.gif"
+    ],
+	[
+      "Sword Of Apocalypse Stamp",
+      98,
+      "A shining sword that will banish evil wherever it goes.",
+      "/images/items/sta_sword_of_apocalypse.gif"
+    ],
+	[
+      "NeoQuest II Esophagor Stamp",
+      98,
+      "This special edition Esophagor Stamp is from the NeoQuest II set.",
+      "/images/items/sta_nq2_esophagor.gif"
+    ],
+	[
+      "Scuzzy Stamp",
+      99,
+      "Argh its Scuzzy! Run for your lives!",
+      "/images/items/sta_nq2_scuzzy.gif"
+    ],
+	[
+      "Anubits Stamp",
+      97,
+      "One of the rarest stamps in the set, the Anubits stamp has silver foil edging.",
+      "/images/items/sta_nq2_anubits.gif"
+    ],
+	[
+      "Ramtor Stamp",
+      98,
+      "A mighty Bruce that you will cross paths with many times in NeoQuest II.",
+      "/images/items/sta_nq2_ramtor.gif"
+    ],
+	[
+      "Terask Stamp",
+      99,
+      "This mighty beast is the ultimate bad guy and the perfect stamp to complete your collection.",
+      "/images/items/sta_nq2_terask.gif"
+    ]
+  ],
   "15": [
     [
       "Valentine Stamp",
       99,
       "Be mine?",
       "/images/items/stamp_valentine.gif"
+    ],
+	[
+      "Misprint Super Bright Rainbow Pool Stamp",
+      101,
+      "It's a double rainbow all the way across the sky! What does it all mean? It's so intense...",
+      "/images/items/stamp_holiday_dubrain.gif"
     ]
   ]
 }
